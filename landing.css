@@ -462,77 +462,7 @@ body {
   flex-shrink: 0;
 }
 
-/* ===========================
-   TRUST BAR
-=========================== */
-.trust-bar {
-  border-top: 1px solid var(--gray-100);
-  border-bottom: 1px solid var(--gray-100);
-  padding: 0;
-  margin-top: 50px;
-  overflow: hidden;
-}
 
-.trust-marquee {
-  overflow: hidden;
-  width: 100%;
-}
-
-.trust-track {
-  display: flex;
-  align-items: center;
-  width: max-content;
-  animation: trust-scroll 26s linear infinite;
-}
-
-.trust-items {
-  display: flex;
-  align-items: center;
-  flex: none;
-  gap: clamp(28px, 4vw, 70px);
-  padding: 20px clamp(28px, 4vw, 70px) 20px 22px;
-}
-
-.trust-items span {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.27em;
-  line-height: 1;
-  text-transform: uppercase;
-  color: var(--gray-600);
-  white-space: nowrap;
-}
-
-.trust-items span:nth-child(odd) {
-  color: var(--gray-200);
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 0;
-}
-
-.trust-marquee:hover .trust-track { animation-play-state: paused; }
-
-@keyframes trust-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .trust-track { animation: none; }
-}
-
-@media (max-width: 480px) {
-  .trust-items { gap: 24px; padding-block: 17px; }
-  .trust-items span { font-size: 10px; letter-spacing: 0.18em; }
-}
-
-/* Legacy utility class retained for any linked landing-page variants. */
-.trust-logos span {
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--gray-400);
-  white-space: nowrap;
-}
 
 /* ===========================
    FEATURES GRID
